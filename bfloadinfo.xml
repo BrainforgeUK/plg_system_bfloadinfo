@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_BFLOADINFO</name>
+  	<creationDate>August 2022</creationDate>
+  	<author>Jonathan Brain</author>
+  	<authorEmail>brainforge@btinternet.com</authorEmail>
+  	<authorUrl>http://www.brainforge.co.uk</authorUrl>
+  	<copyright>Copyright 2022 Jonathan Brain. All rights reserved.</copyright>
+  	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  	<version>1.0.0</version>
+	<description>PLG_SYSTEM_BFLOADINFO_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>language</folder>
+		<filename plugin="bfloadinfo">bfloadinfo.php</filename>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="data"
+						type="subform"
+						label="PLG_SYSTEM_BFLOADINFO_DATA_LABEL"
+						description="PLG_SYSTEM_BFLOADINFO_DATA_DESC"
+						layout="joomla.form.field.subform.repeatable-table"
+						groupByFieldset="false"
+						multiple="true"
+						min="1"
+				>
+					<form>
+						<fieldset
+								name="col1"
+						>
+							<field
+									name="label"
+									type="text"
+									label="PLG_SYSTEM_BFLOADINFO_LABEL_LABEL"
+									hint="ABCDEF"
+									required="true"
+							/>
+						</fieldset>
+
+						<fieldset
+								name="col2"
+						>
+							<field
+									name="type"
+									type="list"
+									label="PLG_SYSTEM_BFLOADINFO_TYPE_LABEL"
+									default="TEXT"
+									required="true"
+							>
+								<option value="TEXT">PLG_SYSTEM_BFLOADINFO_DATA_TEXT_OPTION</option>
+								<option value="TRANS">PLG_SYSTEM_BFLOADINFO_DATA_TRANS_OPTION</option>
+								<option value="LINK">PLG_SYSTEM_BFLOADINFO_DATA_LINK_OPTION</option>
+								<option value="LINK-EMAIL">PLG_SYSTEM_BFLOADINFO_DATA_LINKEMAIL_OPTION</option>
+								<option value="LINK-PHONE">PLG_SYSTEM_BFLOADINFO_DATA_LINKPHONE_OPTION</option>
+								<option value="MODULE-POSN">PLG_SYSTEM_BFLOADINFO_DATA_MODULEPOSN_OPTION</option>
+								<option value="MODULE-ID">PLG_SYSTEM_BFLOADINFO_DATA_MODULEID_OPTION</option>
+							</field>
+						</fieldset>
+
+							<field
+									name="value"
+									type="textarea"
+									label="PLG_SYSTEM_BFLOADINFO_VALUE_LABEL"
+									filter="raw"
+							/>
+					</form>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="PLG_SYSTEM_BFLOADINFO">
+			https://brainforge.co.uk/component/bfupdater?element=plg_system_bfloadinfo.xml
+		</server>
+	</updateservers>
+</extension>
