@@ -74,6 +74,9 @@ class plgSystemBfloadinfo extends CMSPlugin
 						if (empty($module->id)) continue 2;
 						$output = self::loadModules(array($module));
 						break;
+					case 'NOW':
+						$output = date(empty($data->value) ? 'Y' : $data->value);
+						break;
 					default:
 						continue 2;
 				}

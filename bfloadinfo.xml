@@ -56,6 +56,7 @@
 								<option value="LINK">PLG_SYSTEM_BFLOADINFO_DATA_LINK_OPTION</option>
 								<option value="LINK-EMAIL">PLG_SYSTEM_BFLOADINFO_DATA_LINKEMAIL_OPTION</option>
 								<option value="LINK-PHONE">PLG_SYSTEM_BFLOADINFO_DATA_LINKPHONE_OPTION</option>
+								<option value="NOW">PLG_SYSTEM_BFLOADINFO_DATA_NOW_OPTION</option>
 								<option value="MODULE-POSN">PLG_SYSTEM_BFLOADINFO_DATA_MODULEPOSN_OPTION</option>
 								<option value="MODULE-ID">PLG_SYSTEM_BFLOADINFO_DATA_MODULEID_OPTION</option>
 							</field>
