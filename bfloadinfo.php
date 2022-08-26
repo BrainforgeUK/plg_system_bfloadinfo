@@ -16,7 +16,8 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Plugin\CMSPlugin;
 
 class plgSystemBfloadinfo extends CMSPlugin
-	{
+{
+	protected $app;
 	protected static $_data = null;
 
 	/*
@@ -163,18 +164,16 @@ class plgSystemBfloadinfo extends CMSPlugin
 	 */
 	public function onAfterRender()
 	{
-		$app = Factory::getApplication();
-
-		if ($app->isClient('administrator'))
+		if (!$this->app->isClient('site'))
 		{
 			return;
 		}
 
-		$body = $app->getBody();
+		$body = $this->app->getBody();
 
 		if (self::prepare($body))
 		{
-			$app->setBody($body);
+			$this->app->setBody($body);
 		}
 	}
 }
