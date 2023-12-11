@@ -7,7 +7,7 @@
   	<authorUrl>http://www.brainforge.co.uk</authorUrl>
   	<copyright>Copyright 2022 Jonathan Brain. All rights reserved.</copyright>
   	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-  	<version>1.0.0</version>
+  	<version>1.0.1</version>
 	<description>PLG_SYSTEM_BFLOADINFO_XML_DESCRIPTION</description>
 
 	<files>
